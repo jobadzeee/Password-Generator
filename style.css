@@ -325,7 +325,9 @@ label {
 }
 
 .copy_btn {
-  padding: 10px 14px;
+  max-width: 165px;
+  width: 100%;
+  padding: 10px 5px;
   font-family: Inter;
   font-size: 13px;
   font-weight: 500;
@@ -355,4 +357,23 @@ label {
   border: 2px solid #064e3b;
   color: #1f2937;
   background-color: #10b981;
+}
+
+.error {
+  background-color: red;
+}
+
+.error:hover {
+  border: 1px solid #ff3939;
+  color: white;
+}
+
+.error:focus {
+  border: 1px solid rgb(143, 0, 0);
+}
+
+.error:active {
+  border: 2px solid #810000;
+  color: #e0e0e0;
+  background-color: #ce0000;
 }

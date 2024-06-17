@@ -8,6 +8,7 @@ const characters = {
 const generated_1 = document.getElementById("generated_1");
 const pass_length = document.getElementById("pass_length");
 const inp_length = document.getElementById("inp_length");
+const copy_btn = document.getElementById("copy_btn");
 
 inp_length.addEventListener("input", (event) => {
   pass_length.textContent = "Password length: " + event.target.value;
@@ -43,11 +44,15 @@ function Copy() {
   const text = generated_1.textContent;
 
   if (text === "") {
-    alert("Password is not generated yet");
+    copy_btn.textContent = "NOT GENERATED YET";
+    copy_btn.classList.add("error");
   } else {
+    copy_btn.classList.remove("error");
     navigator.clipboard.writeText(text).then(() => {
-      alert("Copied the text: " + text);
-      console.log("copy");
+      copy_btn.textContent = "COPIED!";
     });
+    setTimeout(() => {
+      copy_btn.textContent = "COPY TO CLIPBOARD!";
+    }, 900);
   }
 }
