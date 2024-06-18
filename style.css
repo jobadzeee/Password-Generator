@@ -16,13 +16,12 @@ body {
   margin: 7% auto;
   max-width: 550px;
   width: 100%;
-  height: 550px;
   border: 3px solid #4b5563;
   border-radius: 10px;
 }
 
 .mini_cont {
-  padding: 115px 52px;
+  padding: 80px 52px;
 }
 
 .main {
@@ -376,4 +375,69 @@ label {
   border: 2px solid #810000;
   color: #e0e0e0;
   background-color: #ce0000;
+}
+
+@media only screen and (max-width: 512px) {
+  .mini_cont {
+    padding: 40px 26px;
+  }
+
+  .main {
+    font-size: 26px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .secondary_txt {
+    padding-top: 19px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  .headers {
+    padding-bottom: 30px;
+  }
+
+  .pass_container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .generate_btn {
+    padding: 5px 10px;
+  }
+
+  .copy_btn {
+    padding: 5px 10px;
+    height: 34px;
+  }
+
+  .checkbox_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 5px 0px 5px;
+  }
+
+  .grid-1 {
+    grid-column-start: 1;
+  }
+
+  .grid-2 {
+    grid-column-start: 2;
+  }
+
+  .range_field {
+    width: 190px;
+    height: 35px;
+  }
+
+  .range_field::-webkit-slider-thumb {
+    width: 25px;
+    height: 25px;
+  }
+  .pass_label {
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+  }
 }
